@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 
 const InfoSchema = new mongoose.Schema({
-  title: String,
+  name: String,
   description: String,
   location: String,
   image: String,
