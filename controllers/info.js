@@ -13,6 +13,8 @@ router.get('/', (req, res) => {
     })
 })
 
+// -----------------------------------------COMMENTS CRUD------------------------------------------
+
 //create a comment on a specific page
 router.post(':id/add_comment', (req, res) => {
   Info.create({
@@ -28,10 +30,21 @@ router.post(':id/add_comment', (req, res) => {
     })
 })
 
+//edit a comment on a specific page
+router.put('/:id', (req, res) => {
+  Info.findByIdAndUpdate({ _id: req.params.id }, req.body)
+    .then(() => {
+      res.json('Comment Updated')
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
+
 //delete a specific comment from a specific informational page
 router
   .delete('/:id', (req, res) => {
-    Info.findOneAndRemove({ __id: req.params.id })
+    Info.findOneAndRemove({ _id: req.params.id })
   })
   .then(() => {
     res.json('Comment removed.')
@@ -39,6 +52,8 @@ router
   .catch(error => {
     console.log(error)
   })
+
+//-------------------------------------END COMMENT CRUD------------------------------------------------
 
 //access a quiz on a specific page
 router
