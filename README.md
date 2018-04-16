@@ -12,6 +12,7 @@ Students will interact with a small "map" of the vecinidades (neighborhoods) in 
 * Node 
 * RESTful routes
 * Original seed data 
+* Front End: React
 
 ### User Stories
 
