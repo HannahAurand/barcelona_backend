@@ -1,0 +1,80 @@
+{
+    "Parque del Laberinto": {
+        "information": {
+            "description": "A hedge garden maze in northern Barcelona. If you need an escape from the hustle and bustle of the cramped city life, go to el laberinto. On Wednesday mornings, it is free, and hardly anyone else goes in the middle of the week. Families pack it during the weekends, especially on Sunday.",
+            "location": "Passeig dels Castanyers 1 | Carrer de l'Arquitectura, 08035 Barcelona, Spain",
+            "image": "public/images/laberinto_1.jpg"
+        },
+    "quiz": {
+            "q1": {
+                "question": "How do you ask for help if you are lost in the maze?",
+                "options": [
+                    "¿Me das un pollo por favor?",
+                    "¿Me puedes ayudar, por favor?",
+                    "¿Te gusta Messi más que amigo?",
+                    "¿Hola guapa, qué haces esta noche?"
+                ],
+                "answer": "¿Me puedes ayudar, por favor?"
+            },
+            "q2": {
+                "question": "How do you hit on someone cute in the maze?",
+                "options": [
+                    "Dime cuando sales esta noche, me voy contigo.",
+                    "Hola guapa.",
+                    "Te ves como una cabra.",
+                    "Dame tu número."
+                ],
+                "answer": "Hola guapa"
+            },
+            "q3": {
+                "question": "How do you ask 'How much does it cost to get into the park?'",
+                "options": [
+                    "¿Cuanto cuesta mudarme al parque?",
+                    "¿Qué es un parque?",
+                    "¿Cuándo se puede entrar el parque?",
+                    "¿Cuánto cuesta entrar el parque?"
+                ],
+                "answer": "¿Cuánto cuesta entrar el parque?"
+            }
+        }
+    },
+        "Barceloneta": {
+            "information": {
+                "description": "The tourist's beach in Barcelona. If you're in Barcelona during any month with weather above 60 degrees, you'll see the snowbirds come down from the great white north to enjoy the mediterranean heat. Don't be surprised by nudity on this beach. If you'd like to escape the tourist traps, move further down the beach away from the metro stop, toward Nova Icária or Platja Bogatell. ",
+                "location": "Barceloneta metro stop, yellow line.",
+                "image": "/public/images/barceloneta.jpg"
+            },
+            "quiz": {
+            "q1": {
+                "question": "A man comes up and offers to sell you a 5 euro mojito on the beach. What do you say to him?",
+                "options": [
+                    "Te daré diez euros si me dejes en paz.",
+                    "No, gracias.",
+                    "¿Dos, por favor.",
+                    "No puedo tomar."
+                ],
+                "answer": "No, gracias."
+            },
+            "q2": {
+                "question": "A woman comes up and offers you a massage on the beach. What do you say? (This does happen, and they can be persistent.)",
+                "options": [
+                    "No me gusta.",
+                    "No, gracias, no quiero masaje.",
+                    "Sí, entre los hombros por favor.",
+                    "Déjame en paz."
+                ],
+                "answer": "No, gracias, no quiero masaje."
+            },
+            "q3": {
+                "question": "You run into some tourists who have decided to forgo bathing suits on the beach. What do you do?",
+                "options": [
+                    "Buy a mojito to desensitize yourself to the view.",
+                    "Stare.",
+                    "Run away.",
+                    "Remain calm and try not to stare. This is Europe."
+                ],
+                "answer": "Remain calm and try not to stare. This is Europe."
+                }
+            }
+        }
+    }
