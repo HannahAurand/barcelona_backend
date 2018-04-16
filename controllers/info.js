@@ -3,6 +3,26 @@ const router = express.Router()
 const path = require('path')
 const Info = require('../models/Info')
 
+//--------------------------------------UPLOAD AN IMAGE-----------------------------------------
+
+// /upload is at the top so that it doesn't contradict /:id
+router.post('/:id/upload', (req, res, next) => {
+  console.log(req)
+  let imageFile = req.files.file
+
+  //put the image file in the public folder
+  imageFile.mv(`./public/${req.body.filename}.jpg`, function(err) {
+    console.log(path.resolve(`./public/${req.body.filename}.jpg`))
+    if (err) {
+      return res.status(500).send(err)
+    }
+    //render the image file on the page from the public folder
+    res.json({ file: `public/${req.body.filename}.jpg` })
+  })
+})
+//-----------------------------------END IMAGE UPLOAD----------------------------------
+
+//-----------------------------------GET THE HOMEPAGE----------------------------------
 router.get('/', (req, res) => {
   Info.find(Info)
     .then(info => {
@@ -13,7 +33,7 @@ router.get('/', (req, res) => {
     })
 })
 
-// // -----------------------------------------COMMENTS CRUD------------------------------------------
+// -----------------------------------------COMMENTS CRUD------------------------------------------
 
 //create a comment on a specific page
 router.post(':id/comments/add_comment', (req, res) => {
@@ -61,16 +81,15 @@ router.get('/:id/quiz', (req, res) => {
     })
 })
 
-// //View a specific informational page
-// router
-//   .get('/:id', (req, res) => {
-//     Info.findById({ __id: req.params.id })
-//   })
-//   .then(() => {
-//     res.json(info)
-//   })
-//   .catch(error => {
-//     console.log(error)
-//   })
+//View a specific informational page (inclues information, images and comments)
+router.get('/:id', (req, res) => {
+  Info.findById({ __id: req.params.id })
+    .then(() => {
+      res.json(info)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
 
 module.exports = router
