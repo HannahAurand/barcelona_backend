@@ -51,7 +51,7 @@ router.post(':id/comments/add_comment', (req, res) => {
 })
 
 //edit a comment on a specific page
-router.put('/:id/comments:id', (req, res) => {
+router.put('/:id/comments/:id', (req, res) => {
   Info.findByIdAndUpdate({ _id: req.params.id }, req.body)
     .then(() => {
       res.json('Comment Updated')
