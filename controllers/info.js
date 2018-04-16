@@ -28,12 +28,37 @@ router.post(':id/add_comment', (req, res) => {
     })
 })
 
+//delete a specific comment from a specific informational page
 router
-  .get(':id/quiz', (req, res) => {
-    Info.find({ __id: req.params.id })
+  .delete('/:id', (req, res) => {
+    Info.findOneAndRemove({ __id: req.params.id })
   })
   .then(() => {
-    res.json(Info)
+    res.json('Comment removed.')
+  })
+  .catch(error => {
+    console.log(error)
+  })
+
+//access a quiz on a specific page
+router
+  .get(':id/quiz', (req, res) => {
+    Info.findById({ __id: req.params.id })
+  })
+  .then(() => {
+    res.json(quiz)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+
+//View a specific informational page
+router
+  .get('/:id', (req, res) => {
+    Info.findById({ __id: req.params.id })
+  })
+  .then(() => {
+    res.json(info)
   })
   .catch(error => {
     console.log(error)
