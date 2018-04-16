@@ -1,5 +1,7 @@
-{
-    "Parque del Laberinto": {
+[
+
+    
+        {"Parque del Laberinto": {
         "information": {
             "description": "A hedge garden maze in northern Barcelona. If you need an escape from the hustle and bustle of the cramped city life, go to el laberinto. On Wednesday mornings, it is free, and hardly anyone else goes in the middle of the week. Families pack it during the weekends, especially on Sunday.",
             "location": "Passeig dels Castanyers 1 | Carrer de l'Arquitectura, 08035 Barcelona, Spain",
@@ -34,11 +36,11 @@
                     "¿Cuándo se puede entrar el parque?",
                     "¿Cuánto cuesta entrar el parque?"
                 ],
-                "answer": "¿Cuánto cuesta entrar el parque?"
+                "answer": "¿Cuánto cuesta entrar al parque?"
             }
         }
-    },
-        "Barceloneta": {
+    }},
+       { "Barceloneta": {
             "information": {
                 "description": "The tourist's beach in Barcelona. If you're in Barcelona during any month with weather above 60 degrees, you'll see the snowbirds come down from the great white north to enjoy the mediterranean heat. Don't be surprised by nudity on this beach. If you'd like to escape the tourist traps, move further down the beach away from the metro stop, toward Nova Icária or Platja Bogatell. ",
                 "location": "Barceloneta metro stop, yellow line.",
@@ -77,4 +79,7 @@
                 }
             }
         }
+    
     }
+
+]

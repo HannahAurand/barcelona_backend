@@ -13,10 +13,10 @@ router.get('/', (req, res) => {
     })
 })
 
-// -----------------------------------------COMMENTS CRUD------------------------------------------
+// // -----------------------------------------COMMENTS CRUD------------------------------------------
 
 //create a comment on a specific page
-router.post(':id/add_comment', (req, res) => {
+router.post(':id/comments/add_comment', (req, res) => {
   Info.create({
     name: req.body.name,
     comment: req.body.about,
@@ -31,7 +31,7 @@ router.post(':id/add_comment', (req, res) => {
 })
 
 //edit a comment on a specific page
-router.put('/:id', (req, res) => {
+router.put('/:id/comments:id', (req, res) => {
   Info.findByIdAndUpdate({ _id: req.params.id }, req.body)
     .then(() => {
       res.json('Comment Updated')
@@ -42,41 +42,33 @@ router.put('/:id', (req, res) => {
 })
 
 //delete a specific comment from a specific informational page
-router
-  .delete('/:id', (req, res) => {
-    Info.findOneAndRemove({ _id: req.params.id })
-  })
-  .then(() => {
-    res.json('Comment removed.')
-  })
-  .catch(error => {
-    console.log(error)
-  })
+router.delete('/:id/comments/:id', (req, res) => {
+  Info.findOneAndRemove({ _id: req.params.id })
+})
 
-//-------------------------------------END COMMENT CRUD------------------------------------------------
+// //-------------------------------------END COMMENT CRUD------------------------------------------------
 
 //access a quiz on a specific page
-router
-  .get(':id/quiz', (req, res) => {
-    Info.findById({ __id: req.params.id })
-  })
-  .then(() => {
-    res.json(quiz)
-  })
-  .catch(error => {
-    console.log(error)
-  })
+// router.get('/:id/quiz', (req, res) => {
+//   Info.find({ __id: req.params.id })
+// })
+// .then(() => {
+//   res.json('quiz')
+// })
+// .catch(error => {
+//   console.log(error)
+// })
 
-//View a specific informational page
-router
-  .get('/:id', (req, res) => {
-    Info.findById({ __id: req.params.id })
-  })
-  .then(() => {
-    res.json(info)
-  })
-  .catch(error => {
-    console.log(error)
-  })
+// //View a specific informational page
+// router
+//   .get('/:id', (req, res) => {
+//     Info.findById({ __id: req.params.id })
+//   })
+//   .then(() => {
+//     res.json(info)
+//   })
+//   .catch(error => {
+//     console.log(error)
+//   })
 
 module.exports = router
