@@ -15,10 +15,10 @@ Students will interact with a small "map" of the vecinidades (neighborhoods) in 
 
 ### User Stories
 
-User will be able to view an image "map" of the neighborhoods in Barcelona.
-User will be able to click on a neighborhood in Barcelona.
-User will be able to view the specific neighborhood they clicked on.
-User will be able to take a quiz on what they would do in potential situations in that neighborhood.
-User will be able to view that they got an answer wrong, and see why the correct answer is the most appropriate.
-User will be able to upload comments to a specific neighborhood's page.
-User will be able to upload photos to a specific neighborhood's page gallery.
+1. User will be able to view an image "map" of the neighborhoods in Barcelona.
+2. User will be able to click on a neighborhood in Barcelona.
+3. User will be able to view the specific neighborhood they clicked on.
+4. User will be able to take a quiz on what they would do in potential situations in that neighborhood.
+5. User will be able to view that they got an answer wrong, and see why the correct answer is the most appropriate.
+6. User will be able to upload comments to a specific neighborhood's page.
+7. User will be able to upload photos to a specific neighborhood's page gallery.
