@@ -7,7 +7,8 @@ const InfoSchema = new mongoose.Schema({
   image: String,
   question: String,
   options: String,
-  answer: String
+  answer: String,
+  comments: []
 })
 
 const Info = mongoose.model('Info', InfoSchema)
