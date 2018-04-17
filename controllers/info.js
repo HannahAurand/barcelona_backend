@@ -73,7 +73,7 @@ router.delete('/:id/comments/:id', (req, res) => {
 
 //View a specific informational page (inclues information, images and comments)
 router.get('/:id', (req, res) => {
-  Info.findById({ _id: req.params.id })
+  Info.findOne({ _id: req.params.id })
     .then(() => {
       res.json(info)
     })
