@@ -9,7 +9,7 @@
             "location": "Passeig dels Castanyers 1 | Carrer de l'Arquitectura, 08035 Barcelona, Spain",
             "image": "public/images/laberinto_1.jpg"
         },
-    "quiz": {
+        "quiz": {
             "q1": {
                 "question": "How do you ask for help if you are lost in the maze?",
                 "options": [
@@ -40,7 +40,14 @@
                 ],
                 "answer": "¿Cuánto cuesta entrar al parque?"
             }
-        }
+        },
+        "comments": [
+            {
+            "name": "Hannah Aurand",
+            "comment": "Me encantaba pasear por el laberinto y perderme sola.",
+            "timestamp": "April 17, 2018, 11:45 AM"
+            }
+        ]
     }
 },
        { "place": {
@@ -81,7 +88,14 @@
                 ],
                 "answer": "Remain calm and try not to stare. This is Europe."
                 }
+            },
+        "comments": [
+            {
+            "name": "Hannah Aurand",
+            "comment": "Siempre paseaba el la arena al lado de las olas del mar...",
+            "timestamp": "April 17, 2018, 11:48 AM"
             }
+            ]
         }
     
     }
