@@ -20,6 +20,7 @@ router.post('/:id/upload', (req, res, next) => {
     res.json({ file: `public/${req.body.filename}.jpg` })
   })
 })
+
 //-----------------------------------END IMAGE UPLOAD----------------------------------
 
 // -----------------------------------------COMMENTS CRUD------------------------------------------
@@ -57,11 +58,11 @@ router.delete('/:id/comments/:id', (req, res) => {
   })
 })
 
-// //-------------------------------------END COMMENT CRUD------------------------------------------------
+//-------------------------------------END COMMENT CRUD------------------------------------------------
 
 //access a quiz on a specific page
 router.get('/:id/quiz', (req, res) => {
-  Info.find({ __id: req.params.id })
+  Info.find({ _id: req.params.id })
     .then(() => {
       res.json('quiz')
     })
@@ -72,7 +73,7 @@ router.get('/:id/quiz', (req, res) => {
 
 //View a specific informational page (inclues information, images and comments)
 router.get('/:id', (req, res) => {
-  Info.findById({ __id: req.params.id })
+  Info.findById({ _id: req.params.id })
     .then(() => {
       res.json(info)
     })
