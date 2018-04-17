@@ -22,17 +22,6 @@ router.post('/:id/upload', (req, res, next) => {
 })
 //-----------------------------------END IMAGE UPLOAD----------------------------------
 
-//-----------------------------------GET THE HOMEPAGE----------------------------------
-router.get('/', (req, res) => {
-  Info.find(Info)
-    .then(info => {
-      res.json(info)
-    })
-    .catch(error => {
-      console.log(error)
-    })
-})
-
 // -----------------------------------------COMMENTS CRUD------------------------------------------
 
 //create a comment on a specific page
@@ -85,6 +74,17 @@ router.get('/:id/quiz', (req, res) => {
 router.get('/:id', (req, res) => {
   Info.findById({ __id: req.params.id })
     .then(() => {
+      res.json(info)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
+
+//-----------------------------------GET THE HOMEPAGE----------------------------------
+router.get('/', (req, res) => {
+  Info.find(Info)
+    .then(info => {
       res.json(info)
     })
     .catch(error => {
