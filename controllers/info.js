@@ -26,14 +26,20 @@ router.post('/:id/upload', (req, res, next) => {
 // -----------------------------------------COMMENTS CRUD------------------------------------------
 
 //create a comment on a specific page
-router.post(':id/comments/add_comment', (req, res) => {
-  Info.create({
-    name: req.body.name,
-    comment: req.body.about,
-    timestamp: req.body.timestamp
-  })
-    .then(() => {
-      comment.save()
+router.post('/:id', (req, res) => {
+  Info.findOne({ _id: req.params.id })
+    .then(info => {
+      Comment.create({
+        name: req.body.name,
+        comment: req.body.about,
+        timestamp: req.body.timestamp
+      })
+        .then(() => {
+          Info.Comments.push(Comment)
+        })
+        .then(() => {
+          comment.save()
+        })
     })
     .then(() => {
       res.json('Comment Added!')
@@ -41,22 +47,22 @@ router.post(':id/comments/add_comment', (req, res) => {
 })
 
 //edit a comment on a specific page
-router.put('/:id/comments/:id', (req, res) => {
-  Info.findByIdAndUpdate({ _id: req.params.id }, req.body)
-    .then(() => {
-      res.json('Comment Updated')
-    })
-    .catch(error => {
-      console.log(error)
-    })
-})
+// router.put('/:id', (req, res) => {
+//   Info.findByIdAndUpdate({ _id: req.params.id }, req.body)
+//     .then(() => {
+//       res.json('Comment Updated')
+//     })
+//     .catch(error => {
+//       console.log(error)
+//     })
+// })
 
 //delete a specific comment from a specific informational page
-router.delete('/:id/comments/:id', (req, res) => {
-  Info.findOneAndRemove({ _id: req.params.id }).then(() => {
-    res.json('Commented Deleted!')
-  })
-})
+// router.delete('/:id/comments/:id', (req, res) => {
+//   Info.findOneAndRemove({ _id: req.params.id }).then(() => {
+//     res.json('Commented Deleted!')
+//   })
+// })
 
 //-------------------------------------END COMMENT CRUD------------------------------------------------
 

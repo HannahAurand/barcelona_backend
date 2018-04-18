@@ -1,0 +1,19 @@
+[
+    {
+        "barceloneta": [{
+            "name": "Barceloneta",
+            "location": "Barceloneta Metro Stop, yellow line.",
+            "description": "The most popular beach in Barcelona.",
+            "image": "http://www.barcelonacheckin.com/img/stored_images/barcelona/articles_images/barceloneta-bcn.jpg",
+            "comments": ["Cool place, love it!", "I got burned!", "They sell good mojitos!", "Don't buy the mojitos!!"]
+            
+        }],
+        "laberinto": [{
+            "name": "El Parque del Laberinto",
+            "location": "Mundet Metro Stop",
+            "description": "A calm get-away from the busy city life. Get lost in the maze.",
+            "image": "http://readytogotrips.com/wp-content/uploads/2016/02/jardin_horta_4641_630x.jpg",
+            "comments": ["Me encanta perderme en el laberinto!", "Me gusta!"]
+        }]
+    }
+]
