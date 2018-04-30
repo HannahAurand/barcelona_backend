@@ -23,16 +23,15 @@ router.post('/:id/upload', (req, res, next) => {
 
 //-----------------------------------END IMAGE UPLOAD----------------------------------
 
-// -----------------------------------------COMMENTS CRUD------------------------------------------
+// ----------------------------------COMMENTS CRUD-------------------------------------
 
 //create a comment on a specific page
-router.post('/:id', (req, res) => {
+router.post('/:id/add_comment', (req, res) => {
   Info.findOne({ _id: req.params.id })
     .then(info => {
       Comment.create({
         name: req.body.name,
-        comment: req.body.about,
-        timestamp: req.body.timestamp
+        comment: req.body.about
       })
         .then(() => {
           Info.Comments.push(Comment)

@@ -7,7 +7,13 @@ const InfoSchema = new mongoose.Schema({
   image: String,
   question: String,
   options: String,
-  answer: String
+  answer: String,
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Comment'
+    }
+  ]
 })
 
 const Info = mongoose.model('Info', InfoSchema)
