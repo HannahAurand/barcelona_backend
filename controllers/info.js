@@ -29,26 +29,27 @@ router.post('/:id/upload', (req, res, next) => {
 //create a comment on a specific page
 router.post('/:id/add_comment', (req, res) => {
   // Info.findOne({ _id: req.params.id })
-  //   .then(info => {
-  // let newComment = Comment.create({
-  //   name: req.body.name,
-  //   comment: req.body.about
-  // })
-  //   .then(console.log(Comment))
-  //   .then(() => {
-  //     Info.comments = newComment
-  //   })
-  //   .then(console.log(Info.comments))
-  //   .then(comment => {
-  //     res.redirect('/')
-  //   })
-  //   // .then(() => {
-  //   //   comment.save()
-  //   // })
-  //   // })
-  //   .then(() => {
-  //     res.json('Comment Added!')
-  //   })
+  // .then(info => {
+  // let newComment =
+  Comment.create({
+    name: req.body.name,
+    comment: req.body.about
+  })
+    .then(console.log(Comment))
+    // .then(() => {
+    //   Info.comments = newComment
+    // })
+    // .then(console.log(Info.comments))
+    // .then(comment => {
+    //   res.redirect('/')
+    // })
+    // .then(() => {
+    //   comment.save()
+    // })
+    // })
+    .then(() => {
+      res.json('Comment Added!')
+    })
   // .catch(err => {
   //   console.log(err)
   // })
