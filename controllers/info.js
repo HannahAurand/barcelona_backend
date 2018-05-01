@@ -48,6 +48,9 @@ router.post('/:id/add_comment', (req, res) => {
     .then(() => {
       res.json('Comment Added!')
     })
+    .catch(err => {
+      console.log(err)
+    })
 })
 
 //edit a comment on a specific page
