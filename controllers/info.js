@@ -35,9 +35,9 @@ router.post('/:id/add_comment', (req, res) => {
     comment: req.body.about
   })
     .then(console.log(Comment))
-    // .then(() => {
-    //   Info.comments.push(Comment)
-    // })
+    .then(() => {
+      Info.comments.push(Comment)
+    })
     .then(comment => {
       res.redirect('/')
     })
