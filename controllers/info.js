@@ -30,21 +30,21 @@ router.post('/:id/upload', (req, res, next) => {
 router.post('/:id/add_comment', (req, res) => {
   // Info.findOne({ _id: req.params.id })
   //   .then(info => {
-  Comment.create({
+  let newComment = Comment.create({
     name: req.body.name,
     comment: req.body.about
   })
     .then(console.log(Comment))
     .then(() => {
-      Info.comments = Comment
+      Info.comments = newComment
     })
     .then(console.log(Info.comments))
     .then(comment => {
       res.redirect('/')
     })
-    .then(() => {
-      comment.save()
-    })
+    // .then(() => {
+    //   comment.save()
+    // })
     // })
     .then(() => {
       res.json('Comment Added!')
