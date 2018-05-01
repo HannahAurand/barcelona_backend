@@ -97,6 +97,57 @@
             ]
         }
     
-    }
+    },
+
+
+    { 
+    "place": {
+        "information": {
+        "name": "Gracia",
+        "description": "The hipster neighborhood of Barcelona. Most tourists don't make it up to this small town within Barcelona, and you can find cute stores, bakeries and even dance venues here. It is a local hotspot.",
+        "location": "You can get off at the Joanic metro stop on the yellow line.",
+        "image": "https://dwgfmnrdprofc.cloudfront.net/wp-content/uploads/2016/07/gracia-barcelona-8.jpg"
+    },
+    "quiz": {
+        "q1": {
+            "question": "What does the name of this town mean?",
+            "options": [
+                "Thanks",
+                "Grace",
+                "Gracias",
+                "Goat"
+            ],
+            "answer": "Grace"
+        },
+        "q2": {
+            "question": "How do you ask for a loaf of bread at a bakery",
+            "options": [
+                "Una barra de pan, por favor.",
+                "Dame el pan, mujer.",
+                "Necesito comida.",
+                "Dame tu número."
+            ],
+            "answer": "Una barra de pan, por favor."
+        },
+        "q3": {
+            "question": "How do you ask, 'How much does this cost?'",
+            "options": [
+                "¿Cuánto cuesta esto?",
+                "¿Qué te gusta hacer?",
+                "¿Cuándo cuesta esto?",
+                "¿Cuánto cuesta eso?"
+            ],
+            "answer": "¿Cuánto cuesta esto?"
+        }
+    },
+    "comments": [
+        {
+        "name": "Hannah Aurand",
+        "comment": "I lived in Gracia for 4 months. It was a calm and beautiful neighborhood."
+        }
+    ]
+}
+}
+    
 
 ]
