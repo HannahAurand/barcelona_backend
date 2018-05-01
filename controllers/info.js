@@ -27,19 +27,19 @@ router.post('/:id/upload', (req, res, next) => {
 
 //create a comment on a specific page
 router.post('/:id/add_comment', (req, res) => {
-  Info.findOne({ _id: req.params.id })
-    .then(info => {
-      Comment.create({
-        name: req.body.name,
-        comment: req.body.about
-      })
-        .then(() => {
-          Info.Comments.push(Comment)
-        })
-        .then(() => {
-          comment.save()
-        })
+  // Info.findOne({ _id: req.params.id })
+  //   .then(info => {
+  Comment.create({
+    name: req.body.name,
+    comment: req.body.about
+  })
+    .then(() => {
+      Info.Comments.push(Comment)
     })
+    .then(() => {
+      comment.save()
+    })
+    // })
     .then(() => {
       res.json('Comment Added!')
     })
