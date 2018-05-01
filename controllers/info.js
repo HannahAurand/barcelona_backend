@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 const Info = require('../models/Info')
+const Comment = require('../models/Comment')
 
 //--------------------------------------UPLOAD AN IMAGE-----------------------------------------
 
@@ -33,9 +34,9 @@ router.post('/:id/add_comment', (req, res) => {
     name: req.body.name,
     comment: req.body.about
   })
-    .then(() => {
-      Info.Comments.push(Comment)
-    })
+    // .then(() => {
+    //   Info.comments.push(Comment)
+    // })
     .then(comment => {
       res.redirect('/')
     })
